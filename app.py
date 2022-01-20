@@ -19,9 +19,8 @@ Hi **{}** 👋
 
 Just send me a song name and I'll send the audio to you on Telegram.
 
-__Follow dev on github [@ImJanindu](https://github.com/ImJanindu)__
 
-__A part of **@JaguarBots**__
+__A part of **@GodsValley**__
 """
 
 @bot.on_message(filters.command("start") & filters.private)
@@ -74,7 +73,7 @@ async def get_songs(_, message):
     except Exception as e:
         return await m.edit(f"**Download Failed** \n\n```{e}```")
       
-    cap = f"**🎧 Title:** {title} \n**🎥 Channel:** {channel} \n**⏳ Duration:** {dur} \n\n**📮 By @JaguarBots**"
+    cap = f"**🎧 Title:** {title} \n**🎥 Channel:** {channel} \n**⏳ Duration:** {dur} \n\n**📮 By @GodsValley**"
     aud = f"{ytdl_data['id']}.mp3"
     await m.edit("Uploading")
     await message.reply_audio(audio=open(aud, "rb"), 
